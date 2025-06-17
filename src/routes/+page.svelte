@@ -1,6 +1,7 @@
 <script>
   import EditorIframe from '../components/EditorIframe.svelte';
-  
+  import RecentExps from '../components/RecentExps.svelte';
+
   let showMore = false;
   
   const toggleText = () => {
@@ -12,6 +13,8 @@
     }
 
   };
+
+  export let data;
 
 
 </script>
@@ -30,6 +33,9 @@
     }
   }
 </style>
+
+
+
 
 <section class="mx-3 md:mx-24">
 
@@ -62,7 +68,7 @@
           </p>
 
             <button 
-                class="mt-6 pr-8 pt-8 pb-1 bg-black animate-pulse bg-opacity-50 text-white opacity-100 duration-3000" 
+                class="mt-6 pr-8 pt-8 pb-1 bg-black animate-pulse bg-opacity-50 text-white opacity-100 duration-3000 pointer-events-auto" 
                 on:click={toggleText}
               >
                 {showMore ? 'Less...' : 'More...'}
@@ -85,7 +91,7 @@
 
         </div>
 
-        <button class="-ml-2 pr-1 pt-1 pb-1 hover:bg-black hover:animate-pulse px-2 hover:text-white" on:click={toggleText}>
+        <button class="-ml-2 pr-1 pt-1 pb-1 hover:bg-black hover:animate-pulse px-2 hover:text-white pointer-events-auto" on:click={toggleText}>
           {showMore ? '' : 'More...'}
         </button>
         
@@ -96,10 +102,12 @@
   </div>
   
 </section>
-  
-
-
 
 <section class="mx-3 md:mx-24">
   <EditorIframe />
 </section>
+
+<section class="mx-3 md:mx-24">
+  <RecentExps exps={data.recentExps} />
+</section>
+

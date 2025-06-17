@@ -39,25 +39,35 @@
 
 <section class="mx-3 md:mx-24">
 
-  <div class="mt-24 mb-46 md:mt-0 md:mb-0 md:my-24 h-auto text-7xl md:text-4xl">
-    <h2 class="md:text-[100px] font-bold">hello,</h2>
-    <h1 class="md:text-[100px] font-bold flex flex-col lg:flex-row">
-      <span class="pt-6 lg:pt-0">I'm</span>
-        <div class="hidden lg:block">&nbsp;</div>
-        <div class="flex flex-col lg:flex-row">
-          <div class="underline flex lg:flex-row flex-col pt-3 md:pb-0">
-            <span>Lorenzo</span>
-            <div class="hidden lg:block">&nbsp;</div>
-            <div class="pt-6 md:pt-0">
-              <span>Antei</span>
-              <span class="inline-block blink-cursor ">
-                <span class=""></span>&nbsp;|
-              </span>
-            </div>
-          </div>
+  <div class="my-24 md:my-12 2xl:my-24 h-auto text-7xl 2xl:text-4xl">
+    <h2 class="2xl:text-[100px] font-bold">hello,</h2>
+  
+    <h1 class="font-bold flex flex-col 2xl:flex-row text-7xl 2xl:text-[90px]">
+      <span class="pt-6 2xl:pt-0">I'm</span>
+  
+      <!-- Spazio tra "I'm" e nome -->
+      <div class="hidden 2xl:block w-4"></div>
+  
+      <!-- Nome e Cognome -->
+      <div class="flex flex-col 2xl:flex-row pt-3 2xl:pt-0 items-start 2xl:items-center">
+        <!-- Lorenzo -->
+        <span class="border-b-4 border-black pb-1">Lorenzo</span>
+  
+        <!-- Separatore solo su 2xl -->
+        <div class="hidden 2xl:block w-4 h-full  border-b-4"></div>
+  
+        <!-- Rossi + cursore, bordo solo su "Rossi" -->
+        <div class="pt-6 2xl:pt-0 flex items-center space-x-2">
+          <span class="border-b-4 border-black pb-1">Rossi</span>
+          <span class="inline-block blink-cursor text-black/30">|</span>
         </div>
+      </div>
     </h1>
   </div>
+  
+  
+  
+  
 
   <div class="h-auto md:max-w-1/2">
     <div id="bio-container" class="text-2xl py-12">
